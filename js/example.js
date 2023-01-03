@@ -5,7 +5,7 @@ $(
         for (let i = 0; i < list.length; i++) {
             const element = list[i];
             jQuery.ajax({
-                    url: "../media/examples/" + element + ".md",
+                    url: "./media/examples/" + element + ".md",
                     success: function (data) {
                         let li = document.createElement('li')
                         li.style.opacity = "0"
