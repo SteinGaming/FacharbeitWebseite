@@ -1,0 +1,84 @@
+
+:root {
+    --text-color: #a6814d;
+    --background-color: #272823;
+    background-color: #272823;
+}
+
+button {
+    background-color: #43453e;
+    color: #a6814d;
+    border-color: #697070;
+    border-radius: 4px;
+}
+
+hr {
+    color: #42433c;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30px;
+}
+/* Fixes a bug, where little of the href underline is visible */
+#top > a#logo-href {
+    text-decoration: none;
+    position: relative;
+    bottom: 27px;
+    right: 30px;
+}
+
+#top > a.text {
+    color: var(--text-color);
+    font-size: 30px;
+    /*position: relative;
+    bottom: 35px;
+    left: 30px;
+    margin-left: 40px;*/
+    text-decoration: none;
+}
+
+#top > a.right {
+    left: 30%;
+}
+
+#top > a.text:hover {
+    text-decoration: underline;
+}
+/*
+ Devices, which are smaller than 1200px have issues with a row layout, so we switch to a column layout.
+*/
+@media only screen and (max-width: 1200px) {
+    /* Fixes the logo not being visible to the left */
+    #top>#logo-href {
+        margin-left: 10px;
+    }
+    #separator {
+        margin-top: 40px;
+    }
+    #top {
+        flex-direction: column;
+    }
+    #top> a.text {
+        margin: 3px 0;
+    }
+}
+
+
+#content {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.hidden, #title {
+    opacity: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}

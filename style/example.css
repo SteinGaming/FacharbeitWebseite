@@ -1,0 +1,21 @@
+ul#examples {
+    list-style: none;
+}
+/* From: https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+ul#examples>li>pre>code {
+    overflow: scroll;
+    text-overflow: clip;
+    /*display: -webkit-box;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    -webkit-box-orient: vertical;*/
+    min-width: 0;
+    width: 50%;
+    height: 600px;
+    transition: width 2s, height 2s;
+}
+
+ul#examples>li>pre>code.expanded {
+    width: auto;
+    height: auto;
+}
