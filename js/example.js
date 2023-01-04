@@ -17,18 +17,20 @@ $(
                         li$.append(
                             marked.parse(data)
                         )
+                        let buttons = []
                         $("#" + element + " pre").each(function (index) {
                             let buttonDiv = document.createElement('div')
                             buttonDiv.className = "buttonDiv hljs"
-                            addButton(buttonDiv)
+                            buttons.push(addButton(buttonDiv))
                             this.prepend(buttonDiv)
-
                             let code = this.getElementsByTagName("code")[0]
                             code.classList.add("hljs")
-                            code.innerHTML = hljs.highlightAuto(code.innerHTML).value
+                            code.innerHTML = hljs.highlightAuto(code.innerHTML.replaceAll(/&lt;/g, "<").replaceAll(/&gt;/g, ">")).value
                         })
                         li$.delay(1000).animate({opacity: 1}, 750, function () {
-                            //addButton(element)
+                            buttons.forEach(button => {
+                                $(button).delay(200).animate({opacity: 1}, 500)
+                            })
                             post(element)
                         })
                     }
@@ -55,6 +57,7 @@ $(
             element.prepend(
                 button
             )
+            return button
         }
     }
 )
