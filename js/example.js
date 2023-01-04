@@ -4,36 +4,69 @@ $(
     function () {
         for (let i = 0; i < list.length; i++) {
             const element = list[i];
+            let li = document.createElement('li')
+            li.style.opacity = "0"
+            li.id = element
+            let li$ = $(li) // jQuery object
+
+
+            $("#examples").append(li)
             jQuery.ajax({
                     url: "./media/examples/" + element + ".md",
-                    success: function (data) {
-                        let li = document.createElement('li')
-                        li.style.opacity = "0"
-                        li.id = element
-                        $(li).append(
+                    success: async function (data) {
+                        li$.append(
                             marked.parse(data)
                         )
-                        $("#examples").append(li)
+                        $("#" + element + " pre").each(function (index) {
+                            let buttonDiv = document.createElement('div')
+                            buttonDiv.className = "buttonDiv hljs"
+                            addButton(buttonDiv)
+                            this.prepend(buttonDiv)
 
-                        let button = document.createElement('button')
-                        button.id = element
-                        button.className = "expand"
-                        button.innerText = "+"
-                        button.onclick = function () {
-                            const htmlElement = this.parentNode.getElementsByTagName("code")[0];
-                            const alreadySet = htmlElement.classList.contains("expanded");
-                            if (alreadySet)
-                                htmlElement.classList.remove("expanded")
-                            else htmlElement.classList.add("expanded")
-                        }
-                        hljs.highlightAll()
-                        $("#examples>li#" + element + ">pre").prepend(
-                            button
-                        )
-                        $(li).delay(1000).animate({ opacity: 1 }, 750)
+                            let code = this.getElementsByTagName("code")[0]
+                            code.classList.add("hljs")
+                            code.innerHTML = hljs.highlightAuto(code.innerHTML).value
+                        })
+                        li$.delay(1000).animate({opacity: 1}, 750, function () {
+                            //addButton(element)
+                            post(element)
+                        })
                     }
                 }
             )
         }
+
+        function addButton(element) {
+            let button = document.createElement('button')
+            button.style.opacity = "0"
+            //button.id = element
+            button.className = "expand"
+            button.innerText = "+"
+            button.onclick = function () {
+                const htmlElement = this.parentNode;
+                import("./modal.js").then((module) => {
+                    let preNode = htmlElement.parentNode.cloneNode(true)
+                    preNode.getElementsByClassName("buttonDiv")[0].remove()
+                    preNode.getElementsByTagName("code")[0].prepend(
+                        module.createModal(preNode)
+                    )
+                })
+            }
+            element.prepend(
+                button
+            )
+        }
     }
 )
+
+const checkList = list.concat()
+
+// Only run, if all elements are done loading
+function post(element) {
+    if (checkList.indexOf(element) !== undefined) {
+        checkList.splice(checkList.indexOf(element), 1)
+    }
+    if (checkList.length === 0) {
+        $("#content a").attr("target", "_blank")
+    }
+}

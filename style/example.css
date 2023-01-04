@@ -9,13 +9,15 @@ ul#examples>li>pre>code {
     -webkit-line-clamp: 10;
     line-clamp: 10;
     -webkit-box-orient: vertical;*/
-    min-width: 0;
+    max-width: 50%;
     width: 50%;
     height: 600px;
-    transition: width 2s, height 2s;
 }
 
-ul#examples>li>pre>code.expanded {
-    width: auto;
-    height: auto;
+.buttonDiv {
+    height: 30px;
+    width: 51.3%; /* Should be the same as the above object, but isn't? */
+}
+button {
+    float: right;
 }

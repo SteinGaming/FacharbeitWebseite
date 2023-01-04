@@ -1,7 +1,5 @@
-A bootloader for the JVM (Java Virtual Machine), which reads the dependencies from a Json using "[Gson](https://github.com/google/gson)" and downloading them using ["JSoup"](https://jsoup.org/)
+A bootloader for the JVM (Java Virtual Machine), which reads the dependencies from a Json using [Gson](https://github.com/google/gson) and downloading them using [JSoup](https://jsoup.org/)
 ```java
-package net.dustrean.libloader.boot;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
