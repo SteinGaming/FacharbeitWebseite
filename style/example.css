@@ -9,14 +9,14 @@ ul#examples>li>pre>code {
     -webkit-line-clamp: 10;
     line-clamp: 10;
     -webkit-box-orient: vertical;*/
-    max-width: 50%;
-    width: 50%;
     height: 600px;
+}
+ul#examples>li pre {
+    width: 50%
 }
 
 .buttonDiv {
     height: 30px;
-    width: 51.3%; /* Should be the same as the above object, but isn't? */
 }
 button {
     float: right;
