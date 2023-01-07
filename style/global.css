@@ -5,6 +5,12 @@
     background-color: #272823;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+
 button {
     background-color: #43453e;
     color: #a6814d;
@@ -39,10 +45,6 @@ hr {
     left: 30px;
     margin-left: 40px;*/
     text-decoration: none;
-}
-
-#top > a.right {
-    left: 30%;
 }
 
 #top > a.text:hover {
@@ -81,4 +83,13 @@ hr {
 a {
     color: var(--text-color);
     text-decoration: underline;
+}
+
+#footer {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    padding-bottom: 5px;
 }
