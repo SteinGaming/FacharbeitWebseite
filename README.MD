@@ -3,7 +3,7 @@
 Dies ist meine Facharbeit, welche das Thema "Auftragsprogrammierung" besitzt. <br>
 Dieses Dokument ist dafür da, um meine vorgehensweise zu erklären. <br>
 
-### **EMPFEHLUNG: FALLS SIE DIESE DATEI IM PDF FORMAT LESEN, BITTE ICH SIE, DAS BESSER FORMAT [HIER](https://github.com/SteinGaming/FacharbeitWebseite/blob/main/README.md) ANZUSEHEN**
+### **EMPFEHLUNG: FALLS SIE DIESE DATEI IM PDF FORMAT LESEN, BITTE ICH SIE, DAS BESSER FORMAT [HIER](https://github.com/SteinGaming/FacharbeitWebseite/blob/main/README.MD) ANZUSEHEN**
 
 ## Inhaltsangabe
 
@@ -86,7 +86,7 @@ Aufgrund meiner Vorgehensweise ist es nicht möglich, die Dateien selbst im Brow
 Deshalb müssten sie einen einfachen Server aufsetzen, was sie mit meiner mitgegeben `start.bat` (linux `start.sh`) ansehen können. <br>
 Dafür bräuchten sie jedoch auf Python 3.0 oder höher.
 
-Wenn dies nicht möglich ist, können sie jederzeit auf [der von Github (immer aktuelle) Webseite gehen](https://steingaming.github.io/FacharbeitWebseite/).
+Wenn dies nicht möglich ist, können sie jederzeit auf [der von Github (immer aktuellen) Webseite gehen](https://steingaming.github.io/FacharbeitWebseite/).
 
 #### Ansehen der Dateien
 
