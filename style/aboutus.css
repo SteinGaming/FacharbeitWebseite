@@ -1,5 +1,19 @@
 
 ul#people {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+ul#people li.person {
     display: inline;
+    margin: 10px;
+}
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.description br {
+    margin-bottom: 10px;
 }
