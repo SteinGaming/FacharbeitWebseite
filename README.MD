@@ -3,7 +3,7 @@
 Dies ist meine Facharbeit, welche das Thema "Auftragsprogrammierung" besitzt. <br>
 Dieses Dokument ist dafür da, um meine vorgehensweise zu erklären. <br>
 
-### **EMPFEHLUNG: FALLS SIE DIESE DATEI IM PDF FORMAT LESEN, BITTE ICH SIE, DAS BESSER FORMAT [HIER](https://github.com/SteinGaming/FacharbeitWebsite/blob/main/README.md) ANZUSEHEN**
+### **EMPFEHLUNG: FALLS SIE DIESE DATEI IM PDF FORMAT LESEN, BITTE ICH SIE, DAS BESSER FORMAT [HIER](https://github.com/SteinGaming/FacharbeitWebseite/blob/main/README.md) ANZUSEHEN**
 
 ## Inhaltsangabe
 
@@ -15,10 +15,10 @@ Dieses Dokument ist dafür da, um meine vorgehensweise zu erklären. <br>
    3. [Ansehen der Dateien](#ansehen-der-dateien)
    4. [Ansehen der Markdown Dateien](#ansehen-der-markdown-dateien)
 3. [Vorgehensweise](#vorgehensweise)
-   1. [Idee](#ins-1-idee-ins)
-   2. [Planung](#ins-2-planung-ins)
-   3. [Umsetzung](#ins-3-umsetzung-ins)
-   4. [Komponente](#ins-4-komponente-ins)
+   1. [Idee](#1-idee)
+   2. [Planung](#2-planung)
+   3. [Umsetzung](#3-umsetzung)
+   4. [Komponente](#4-komponente)
 4. [Fazit](#fazit)
 
 ## Dateistruktur
@@ -28,28 +28,43 @@ Dieses Dokument ist dafür da, um meine vorgehensweise zu erklären. <br>
 ```
 .
 ├── aboutus.html
+├── credits.html
 ├── examples.html
 ├── Facharbeit_Website.iml
 ├── global.html
 ├── index.html
 ├── js
-│   ├── example.js
-│   ├── global.js
-│   ├── jquery-3.6.3.min.js
-│   ├── marked.min.js
-│   └── modal.js
+│   ├── example.js
+│   ├── global.js
+│   ├── index.js
+│   ├── jquery-3.6.3.min.js
+│   ├── marked.min.js
+│   └── modal.js
 ├── media
-│   ├── examples
-│   │   ├── Example1.md
-│   │   └── Example2.md
-│   ├── favicon.png
-│   └── logo.png
+│   ├── examples
+│   │   ├── Example1.md
+│   │   └── Example2.md
+│   ├── favicon.png
+│   ├── languages
+│   │   ├── Gnu-bash.svg
+│   │   ├── HTML5.svg
+│   │   ├── JavaScript.svg
+│   │   ├── Java.svg
+│   │   ├── Kotlin.svg
+│   │   ├── MongoDB.svg
+│   │   └── Redis.svg
+│   ├── logo.png
+│   └── others
+│       └── Silhouette.png
 ├── package.json
 ├── package-lock.json
-├── README.MD
+├── README.md
+├── README.pdf
 ├── start.bat
 ├── start.sh
 └── style
+    ├── aboutus.css
+    ├── credits.css
     ├── example.css
     ├── global.css
     ├── highlight-js.css
@@ -75,7 +90,7 @@ Wenn dies nicht möglich ist, können sie jederzeit auf [der von Github (immer a
 #### Ansehen der Dateien
 
 **Wenn sie diese Datei bei der von mir angehängten lesen, dann dies bitte durchlesen.
-Sonst können sie diesen teil überspringen.**
+Sonst können sie diesen Teil überspringen und [hier](#ansehen-der-markdown-dateien) gehen.**
 
 Sie haben 2 Möglichkeiten die Dateien anzusehen:
 
@@ -89,23 +104,28 @@ Diese können sie entweder auf Github ansehen, oder sie können sie mit einem Ma
 
 ## Vorgehensweise
 
+<br>
+<ins>
 
-### <ins>1. Idee</ins>
-
+### 1. Idee
+</ins>
 Die Idee war es, eine Website zu erstellen, welche die Auftragsprogrammierung anbietet. <br>
 Dabei zeige ich Beispiele, die Personen hinter dieser "Firma" (ich) und Kontaktmöglichkeiten zum Bewerben und Beauftragen. <br>
 Den Firmennamen und das Logo habe ich mit der Seite https://brandmark.io generiert, wobei ich die Stichwörter "contracted-coding programming" angegeben habe. <br>
 Das Logo: <br>
+
 ![Logo](media/logo.png)
 
-### <ins>2. Planung</ins>
+<ins>
 
+### 2. Planung
+</ins>
 Die Webseite hat 2 Teile: Die globale Sektion und die unterteile Sektionen.
 
 #### Globale Sektion
 
 Die globale Sektion ist die Sektion, welche auf jeder Seite zu sehen ist. <br>
-Diese existiert, um repetition zu vermeiden. <br>
+Diese existiert, um Repetition zu vermeiden. <br>
 Bei der globalen Sektion gibt es 2 Teile: das Logo und die Navigationsleiste. <br>
 Mit der Navigationsleiste kann man von Seite zu Seite wechseln.
 
@@ -113,16 +133,20 @@ Mit der Navigationsleiste kann man von Seite zu Seite wechseln.
 
 Die Untersektionen sind die Sektionen, wo der Inhalt zu sehen ist (z. B. die Hauptseite und die Beispielseite).
 
-### <ins>3. Umsetzung</ins>
+<ins>
 
+### 3. Umsetzung
+</ins>
 Die Umsetzung ist in 3 Teile unterteilt: HTML, CSS und JavaScript.
+<br><br>
 
 ### HTML
 
 HTML wurde verwendet, um die Struktur der Seite zu erstellen. <br>
-Dort habe ich die implementation der Sektionen eingeführt. <br>
+Dort habe ich die Implementation der Sektionen eingeführt. <br>
 Die globale Sektion ist in jeder Seite vorhanden, wobei die Untersektionen nur in der jeweiligen Seite vorhanden sind. <br>
-Bei jeder Seite wurden die Dateien `global.css (style/)` und `global.js (js/)` eingebunden, welche die globale Sektion implementieren. <br>
+Bei jeder Seite wurden die Dateien [`global.css (style/)`](#css) und [`global.js (js/)`](#javascript) eingebunden, welche die globale Sektion implementieren. <br>
+`global.js` nutzt dann die Gelegenheit, um die `global.html` in die div mit der id "includedContent" und die Fußzeile in den footer mit der id "footer" zu injizieren <br>
 Die Dateien sind in dem Hauptverzeichnis mit der Erweiterung `.html` zu finden.
 
 ### CSS
@@ -161,22 +185,29 @@ Dabei nutze ich `marked.js` um die Markdown Dateien in HTML zu rendern und `high
 Diese Bibliotheken werden _**nur**_ in der `example.html` Datei verwendet. <br>
 Da der normale highlighting-style von `highlight.js` nicht zu meinem Design passt, habe ich eine eigene erstellt (`style/highlight-js.css`). <br>
 
-### <ins>4. Komponente</ins>
+<ins>
+
+### 4. Komponente
+</ins>
 
 ### Global
 
 Beim Vorgehen an die Färbung der Seite habe ich mich für dunklere Farben entschieden, da diese leichter zu lesen sind und die Augen weniger belasten. <br>
 Um verschiedene Breiten zu unterstützen, habe ich die Seite responsive gestaltet, wobei jedoch eine minimale Breite von 720px trotzdem empfohlen ist. <br>
+Auf jeder Seite gibt es einen Header, wo zur linken ein Logo ist und zur rechten mehrere Weiterleitungen, und einen Fußzeile, wo man eine Weiterleitung zu den [Credits](#credits-impressum-der-ressourcen) findet.
 
 ### Hauptseite
 
 Die Hauptseite besteht nur aus dem globalen Teil und dem Inhalt. <br>
 Der Inhalt besitzt nur einen Header und einen Text, wobei der Text nur eine Beschreibung der "Firma" ist. <br>
+Dazu gibt es Bilder (`media/languages`), die von `js/index.js` geladen werden. <br>
+Urheberrecht ist bei [den Credits](#credits-impressum-der-ressourcen) zu finden. <br>
 
 ### Über uns
 
 Bei dieser Seite werden die Personen gelistet, welche hinter dieser "Firma" stehen (nur ich). <br>
 Dabei wird jeder Person ein Bild, ein Name und eine Beschreibung (Hintergrund im Programmieren) angezeigt. <br>
+Als letztes Element wird eine Silhouette von einer Person
 
 ### Unsere Beispiele
 
@@ -185,14 +216,18 @@ Diese werden in dem Ordner `media/examples/` als Markdown Dateien gespeichert, w
 Diese sind in der `example.js` als Liste abgespeichert, 
 Dabei wird eine Beschreibung und der Code angezeigt. <br>
 Oben rechts befindet sich ein Knopf, um das Beispiel in einem modalen Fenster zu öffnen. <br>
-Wenn man außerhalb des Inhalts des modalen Fensters oder auf das X klickt, wird dieses geschlossen. <br>
+Wenn man außerhalb des Inhalts des modalen Fensters oder auf das obere rechte X klickt, wird dieses geschlossen. <br>
 
 ### Kontakt & Bewerbung
 
 Da dieses Projekt ohne Backend fungiert, werden die Daten nicht gespeichert. <br>
 Deshalb habe ich für Kontakt eine Weiterleitung zu meiner privaten E-Mail-Adresse und für Bewerbung eine Weiterleitung zu einem Google Form erstellt. <br>
 
+### Credits (Impressum der Ressourcen)
+Hier findet man Informationen zu den Ressourcen, welche ich für das Erstellen dieser Webseite benutzt habe (Hauptsächlich der Bilder auf der [Hauptseite](#hauptseite)). <br>
+
 ## Fazit
+
 
 Ich habe sehr viele Informationen ausgelassen, weshalb ich ihnen empfehle, sich die Dateien genau anzuschauen. <br>
 Bei Nachfragen können sie mich jederzeit über IServ kontaktieren. <br>
