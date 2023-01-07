@@ -76,7 +76,8 @@ Dieses Dokument ist dafür da, um meine vorgehensweise zu erklären. <br>
 
 #### Sprache
 
-Ich habe die ganze Seite im Englischen geschrieben, da ich es für sinnvoller halte, da dies mehr zum Programmieren passt, welche hauptsächlich auch in dieser Sprache bearbeitet, besprochen und vergleicht wird. <br>
+Ich habe die ganze Seite im Englischen geschrieben, da ich es für sinnvoller halte, um dies mehr zum Programmieren anzupassen, welche hauptsächlich auch in dieser Sprache bearbeitet, besprochen und vergleicht wird. <br>
+Es gab von ihnen keine Vorschrift, weshalb ich denke, das dies erlaubt sei. <br>
 
 #### Ansehen der Seite
 
