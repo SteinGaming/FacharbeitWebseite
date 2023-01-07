@@ -2,4 +2,20 @@
 #title {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+}
+
+#text {
+    font-size: 24px;
+}
+
+#languages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.language {
+    height: 125px;
+    width: 125px;
+    margin: 10px;
 }
