@@ -3,7 +3,7 @@ $(
         // Set the title
         document.title = "Coderspace"
         // Automatically load the favicon to all pages and also add modal style
-        $('head').append('<link rel="icon" href="../media/favicon.png">').append('<link rel="stylesheet" href="../style/modal.css">')
+        $('head').append('<link rel="icon" href="./media/favicon.png">').append('<link rel="stylesheet" href="./style/modal.css">')
         // Insert the global html into the page
         // From: https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file
         $("#includedContent").load("global.html", function () {
