@@ -5,6 +5,10 @@
     background-color: #272823;
 }
 
+h1, p {
+    color: var(--text-color);
+}
+
 body {
     position: relative;
     min-height: 100vh;

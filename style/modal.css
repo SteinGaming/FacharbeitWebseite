@@ -13,7 +13,7 @@
 
 .modal-content {
     position: center;
-    background-color: inherit;
+    background-color: var(--background-color);
     margin: 5% auto 15%;
     padding: 20px;
     overflow: scroll;

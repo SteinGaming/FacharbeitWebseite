@@ -195,7 +195,7 @@ Da der normale highlighting-style von `highlight.js` nicht zu meinem Design pass
 
 Beim Vorgehen an die Färbung der Seite habe ich mich für dunklere Farben entschieden, da diese leichter zu lesen sind und die Augen weniger belasten. <br>
 Um verschiedene Breiten zu unterstützen, habe ich die Seite responsive gestaltet, wobei jedoch eine minimale Breite von 720px trotzdem empfohlen ist. <br>
-Auf jeder Seite gibt es einen Header, wo zur linken ein Logo ist und zur rechten mehrere Weiterleitungen, und einen Fußzeile, wo man eine Weiterleitung zu den [Credits](#credits-impressum-der-ressourcen) findet.
+Auf jeder Seite gibt es einen Header, wo zur linken ein Logo ist und zur rechten mehrere Weiterleitungen, und eine Fußzeile, wo man eine Weiterleitung zu den [Credits](#credits-impressum-der-ressourcen) findet.
 
 ### Hauptseite
 
@@ -214,7 +214,7 @@ Als letztes Element wird eine Silhouette von einer Person
 
 Bei dieser Seite werden die Beispiele gelistet, welche ich in meiner Zeit als Programmierer erstellt habe. <br>
 Diese werden in dem Ordner `media/examples/` als Markdown Dateien gespeichert, welche dann mithilfe von `marked.js` und `highlight.js` gerendert werden. <br>
-Diese sind in der `example.js` als Liste abgespeichert, 
+Diese sind in der `example.js` als Liste abgespeichert. <br>
 Dabei wird eine Beschreibung und der Code angezeigt. <br>
 Oben rechts befindet sich ein Knopf, um das Beispiel in einem modalen Fenster zu öffnen. <br>
 Wenn man außerhalb des Inhalts des modalen Fensters oder auf das obere rechte X klickt, wird dieses geschlossen. <br>
@@ -223,6 +223,8 @@ Wenn man außerhalb des Inhalts des modalen Fensters oder auf das obere rechte X
 
 Da dieses Projekt ohne Backend fungiert, werden die Daten nicht gespeichert. <br>
 Deshalb habe ich für Kontakt eine Weiterleitung zu meiner privaten E-Mail-Adresse und für Bewerbung eine Weiterleitung zu einem Google Form erstellt. <br>
+AKTUALISIERUNG 8. JAN: Nun ist Kontakt eine Modal, wo die E-Mail-Adresse angezeigt wird. <br>
+Dies wurde hinzugefügt für Geräte, die keine mailto: Links unterstützen. <br>
 
 ### Credits (Impressum der Ressourcen)
 Hier findet man Informationen zu den Ressourcen, welche ich für das Erstellen dieser Webseite benutzt habe (Hauptsächlich der Bilder auf der [Hauptseite](#hauptseite)). <br>
